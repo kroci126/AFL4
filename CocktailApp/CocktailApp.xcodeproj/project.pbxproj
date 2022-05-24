@@ -11,12 +11,13 @@
 		04942DEF283BC0BF00C6F447 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942DEE283BC0BF00C6F447 /* ContentView.swift */; };
 		04942DF1283BC0C000C6F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04942DF0283BC0C000C6F447 /* Assets.xcassets */; };
 		04942DF4283BC0C000C6F447 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04942DF3283BC0C000C6F447 /* Preview Assets.xcassets */; };
-		04942DFC283BC7CD00C6F447 /* RcmdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942DFB283BC7CD00C6F447 /* RcmdCardView.swift */; };
 		04942DFE283BC9CE00C6F447 /* TestPic.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04942DFD283BC9CE00C6F447 /* TestPic.jpeg */; };
 		04942E02283BCE1C00C6F447 /* RcmdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942E01283BCE1C00C6F447 /* RcmdViewController.swift */; };
 		04942E07283BD01900C6F447 /* RcmdControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942E06283BD01900C6F447 /* RcmdControl.swift */; };
 		04942E0A283BD42E00C6F447 /* drinkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04942E09283BD42E00C6F447 /* drinkData.json */; };
 		04942E0F283BD52900C6F447 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942E0E283BD52900C6F447 /* Drink.swift */; };
+		04942E16283C747600C6F447 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942E15283C747600C6F447 /* ModelData.swift */; };
+		04942E1A283C77DB00C6F447 /* RcmdCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04942E19283C77DB00C6F447 /* RcmdCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +26,13 @@
 		04942DEE283BC0BF00C6F447 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04942DF0283BC0C000C6F447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04942DF3283BC0C000C6F447 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		04942DFB283BC7CD00C6F447 /* RcmdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcmdCardView.swift; sourceTree = "<group>"; };
 		04942DFD283BC9CE00C6F447 /* TestPic.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TestPic.jpeg; sourceTree = "<group>"; };
 		04942E01283BCE1C00C6F447 /* RcmdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcmdViewController.swift; sourceTree = "<group>"; };
 		04942E06283BD01900C6F447 /* RcmdControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcmdControl.swift; sourceTree = "<group>"; };
 		04942E09283BD42E00C6F447 /* drinkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinkData.json; sourceTree = "<group>"; };
 		04942E0E283BD52900C6F447 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		04942E15283C747600C6F447 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		04942E19283C77DB00C6F447 /* RcmdCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcmdCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				04942DEC283BC0BF00C6F447 /* CocktailAppApp.swift */,
 				04942DF0283BC0C000C6F447 /* Assets.xcassets */,
 				04942DFA283BC12200C6F447 /* View */,
+				04942E1B283C794400C6F447 /* DrinksList */,
 				04942E08283BD3CA00C6F447 /* Resources */,
 				04942E0B283BD4A700C6F447 /* Model */,
 				04942E10283BDA8C00C6F447 /* Services */,
@@ -96,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				04942E01283BCE1C00C6F447 /* RcmdViewController.swift */,
-				04942DFB283BC7CD00C6F447 /* RcmdCardView.swift */,
 				04942E06283BD01900C6F447 /* RcmdControl.swift */,
+				04942E19283C77DB00C6F447 /* RcmdCard.swift */,
 			);
 			path = Recommended;
 			sourceTree = "<group>";
@@ -114,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				04942E0E283BD52900C6F447 /* Drink.swift */,
+				04942E15283C747600C6F447 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +127,13 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		04942E1B283C794400C6F447 /* DrinksList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DrinksList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +212,9 @@
 				04942E02283BCE1C00C6F447 /* RcmdViewController.swift in Sources */,
 				04942E07283BD01900C6F447 /* RcmdControl.swift in Sources */,
 				04942DED283BC0BF00C6F447 /* CocktailAppApp.swift in Sources */,
-				04942DFC283BC7CD00C6F447 /* RcmdCardView.swift in Sources */,
+				04942E1A283C77DB00C6F447 /* RcmdCard.swift in Sources */,
 				04942E0F283BD52900C6F447 /* Drink.swift in Sources */,
+				04942E16283C747600C6F447 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 //
-//  RcmdCardView.swift
+//  RcmdCard.swift
 //  CocktailApp
 //
-//  Created by MacBook Pro on 23/05/22.
+//  Created by MacBook Pro on 24/05/22.
 //
 
 import SwiftUI
 
-struct RecommendedCV: View {
+struct RcmdCard: View {
     var body: some View {
         Image("TestPic") //pic url
             .resizable()
@@ -25,6 +25,7 @@ struct TextOverlay: View {
             startPoint: .bottom,
             endPoint: .center)
     }
+
     
     var body: some View{
         ZStack(alignment: .bottomLeading) {
@@ -39,8 +40,8 @@ struct TextOverlay: View {
     }
 }
 
-struct RecommendedCV_Previews: PreviewProvider {
+struct RcmdCard_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedCV()
+        RcmdCard()
     }
 }

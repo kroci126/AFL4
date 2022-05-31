@@ -8,13 +8,34 @@
 import Foundation
 import SwiftUI
 
+struct DrinkArray: Hashable, Codable {
+    let drinks: [Drink]
+}
+
 struct Drink: Hashable, Codable{
-    var id : Int
-    var name : String
-    var instruction : String
+//    var idDrink : String
+//    var strDrink : String
+//    var strInstructions : String
+//    var strCategory : String
+//    var strIngredient : String
+//
+//    private var strDrinkThumb: String
+//    var image: Image {
+//        Image(strDrinkThumb)
+//    }
+    var id: String
+    var name: String
+    var category: String?
+    var instructions: String?
+    var ingredient1: String?
+    var image: String
     
-    private var imageLink: String
-    var image: Image {
-        Image(imageLink)
+    private enum CodingKeys: String, CodingKey {
+        case id = "idDrink"
+        case name = "strDrink"
+        case category = "strCategory"
+        case instructions = "strInstructions"
+        case image = "strDrinkThumb"
     }
+    
 }

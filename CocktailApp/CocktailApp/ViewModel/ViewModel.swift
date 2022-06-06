@@ -10,9 +10,9 @@ import SwiftUI
 
 class ViewModelDrink: ObservableObject {
     @Published var drink: [Drink] = []
-    
+    @Published var filteredDrink = [Drink]()
     func fetch(){
-        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a") else {
+        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=k") else {
             return
         }
         
@@ -25,6 +25,7 @@ class ViewModelDrink: ObservableObject {
                 let drinks = try JSONDecoder().decode(DrinkArray.self, from: data)
                 DispatchQueue.main.async {
                     self?.drink = drinks.drinks
+                    self?.filteredDrink = drinks.drinks
                 }
             }
             
@@ -34,6 +35,10 @@ class ViewModelDrink: ObservableObject {
         }
         
         task.resume()
+    }
+    
+    func search(with query: String = ""){
+        filteredDrink = query.isEmpty ? drink : drink.filter {$0.name.localizedCaseInsensitiveContains(query)}
     }
 }
 
@@ -65,4 +70,36 @@ class ViewModelRandomDrink: ObservableObject {
         task.resume()
     }
 }
+
+//API ingredient tidak lengkap
+
+//class ViewModelIngredient: ObservableObject{
+//    @Published var ingredient: [Ingredient] = []
+//
+//    func fetch(){
+//        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list") else {
+//            return
+//        }
+//
+//        let task = URLSession.shared.dataTask(with: url) {[weak self] data, _, error in
+//            guard let data = data, error == nil else {
+//                return
+//            }
+//
+//            do{
+//                let ingredients = try JSONDecoder().decode(IngredientArray.self, from: data)
+//                DispatchQueue.main.async {
+//                    self?.ingredient = ingredients.ingredients
+//                }
+//
+//            }
+//            catch{
+//
+//            }
+//
+//        }
+//        task.resume()
+//    }
+//}
+
 

@@ -7,10 +7,12 @@
 
 import Foundation
 
-struct IngredientArray: Hashable, Codable {
-    let drinks: [Ingredient]
-}
-
 struct Ingredient: Hashable, Codable {
-    let strIngredient1: String
+    var ingredientName: String
+    var description: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case ingredientName = "strIngredient1"
+        case description = "strDescription"
+    }
 }

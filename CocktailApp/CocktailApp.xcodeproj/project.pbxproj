@@ -66,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0475811A28426A2E004D4876 /* ViewModel.swift */,
+				04E4E054284DC8370094D8B8 /* ModelData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,7 +134,6 @@
 			children = (
 				04E31803284DE4D7003B9321 /* Drink.swift */,
 				0475811728426844004D4876 /* Ingredient.swift */,
-				04E4E054284DC8370094D8B8 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
